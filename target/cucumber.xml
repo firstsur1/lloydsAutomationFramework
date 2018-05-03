@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="78.419099">
+<testcase classname="Buying a MacBook Pro on the website" name="A MacBook 15” with accessories can be ordered on the website" time="33.977463">
+<system-out><![CDATA[Given I go to the website...................................................passed
+When I choose a MacBook Pro with the following features and accessories.....passed
+Then I can place an order for it............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Buying a MacBook Pro on the website" name="The correct price and VAT are displayed for a MacBook 15” with accessories" time="44.441636">
+<failure message="java.lang.AssertionError: expected [2917.99] but found [£2,718.00]&#13;&#10;&#9;at org.testng.Assert.fail(Assert.java:93)&#13;&#10;&#9;at org.testng.Assert.failNotEquals(Assert.java:512)&#13;&#10;&#9;at org.testng.Assert.assertEqualsImpl(Assert.java:134)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:115)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:189)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:199)&#13;&#10;&#9;at pageObjects.MacBookProPage.totalPriceDisplayed(MacBookProPage.java:234)&#13;&#10;&#9;at stepDefinitions.MacBookProPageSteps.a_total_price_of_£_will_be_displayed(MacBookProPageSteps.java:109)&#13;&#10;&#9;at ✽.Then a total price of £2917.99 will be displayed(src/test/resources/functionalTests/BuyMacBookPro.feature:25)&#13;&#10;"><![CDATA[Given when I choose the following items:....................................passed
+When I proceed to the checkout..............................................passed
+Then a total price of £2917.99 will be displayed............................failed
+And £486.34 will be listed for VAT..........................................skipped
+
+StackTrace:
+java.lang.AssertionError: expected [2917.99] but found [£2,718.00]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at org.testng.Assert.assertEquals(Assert.java:189)
+	at org.testng.Assert.assertEquals(Assert.java:199)
+	at pageObjects.MacBookProPage.totalPriceDisplayed(MacBookProPage.java:234)
+	at stepDefinitions.MacBookProPageSteps.a_total_price_of_£_will_be_displayed(MacBookProPageSteps.java:109)
+	at ✽.Then a total price of £2917.99 will be displayed(src/test/resources/functionalTests/BuyMacBookPro.feature:25)
+]]></failure>
+</testcase>
+</testsuite>
